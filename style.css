@@ -1,0 +1,201 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+:root {
+    font-size:62.5%;
+    --ff-primary:"Poppins", sans-serif;
+     --text-color:white;
+
+     --hue:194;
+     --primary-color: #092D38;
+     --second-color: #065E7C;
+     --planodeFundo-color:black;
+     --linhatabs-color:#4A808C;
+     --textsecond-color:#7C7C8A;
+}
+body{
+    font-size:1.6rem;
+    color:var(--text-color);
+    background-color:var(--planodeFundo-color);
+
+}
+body *{
+    font-family: var(--ff-primary)
+}
+/*configuração padrão para remover coisas da tela, mas tem que ser acessivel para acessibilidade! */
+.sr-only{               
+    position:absolute;
+    width:0.1rem;
+    height:0.1rem;
+    padding:0;
+    margin: -0.1rem;
+    overflow:hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width:0;
+
+}
+#app{
+    padding:2rem;
+    max-width:100rem;
+    margin:0 auto;
+    
+}
+header{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    margin:2.5rem 0;
+
+}
+
+#input-search{
+    background:var(--primary-color);
+    border:none;
+    width:46.2rem;
+    height:4.8rem;
+    color:var(--text-color);
+    border-radius: 0.5rem;
+}
+#input-search:hover{
+    background: var(--text-color);
+    color:var(--second-color);
+}
+
+
+
+ button {
+    background:var(--second-color);
+    color:var(--text-color);
+    width:17rem;
+    height:4.8rem;
+    border:none;
+    border-radius: 0.5rem;
+
+}
+
+button:hover{
+    background:var(--text-color);
+    color:var(--second-color);
+  
+}
+
+.search button:hover{
+    filter:brightness(1.1);
+
+}
+search button {
+    background-color:var(--primary-color);
+    border-radius: 0 .4rem .4rem 0;
+    height:3.2rem;
+    border:none;
+    padding: 0 1rem;
+    cursor: pointer;
+
+    
+}
+table{
+    margin-top:6rem;
+    width:100%;
+    border-collapse: separate;
+    box-shadow: 0 1rem 2rem -1rem rgba(0, 0, 0, 0.3);
+    border:0.1rem solid var(--linhatabs-color);
+    border-radius: 1.2rem;
+  
+}
+
+table *{
+    font-size: 1.4rem;
+    color: var(--text-color);
+ 
+    
+}
+
+table th{
+    background: var(--primary-color);
+    text-align:centert;
+    font-weight:normal;
+    padding:1.6rem ;
+  
+}
+
+
+
+table tr:nth-child(odd) { 
+    background: var(--planodeFundo-color);  
+  
+}
+table tr:nth-child(odd):hover{
+    background:var(--second-color);
+}
+
+/*esse metodo serve para colorir linhas da tabela de acordo de e par ou impar! */
+table tr:nth-child(even) {
+    background: var(--primary-color) ;
+
+}
+table tr:nth-child(even):hover{
+    background:var(--second-color);
+}
+
+table td{
+    padding:2.4rem 2.4rem 2.4rem 4rem;
+    text-align:left;
+
+}
+
+td.user{
+    display:flex;
+    align-items: center;
+    gap:2rem;
+}
+td.user:hover p,
+td.user:hover span {
+    color: var(--textsecond-color);
+}
+
+td.user img {
+    width:5rem;
+    height:5rem;
+    object-fit :cover;
+    border-radius:50%;
+}
+
+td.user a{
+  text-decoration:none;  
+  
+}
+
+td.user a p {
+    font-weight:bold;
+}
+#colunasuser:hover{
+    background-color:red;
+}
+
+
+td .remove {
+    background:none;
+    border:none;
+    color:red;
+    cursor:pointer;
+}
+
+td .remove:hover{
+    color:#8b0000;
+}
+
+.usernull td{
+    text-align:center;
+
+}
+.usernull td:hover{
+    background:var(--text-color)
+
+}
+
+h1{
+    color:var(--textsecond-color)
+}
